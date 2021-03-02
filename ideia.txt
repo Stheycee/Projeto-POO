@@ -1,0 +1,11 @@
+João é um jovem empreendedor, que se viu em uma situação que precisava abraçar a oportinidade para dar o primeiro passo para sua empresa. Visto que ao longo do tempo a área de automoveis de certa forma vem crescendo, mas em contra partida o publico alvo vem diminuindo pela crise econômica que muitos estão passando, pensando nisso, joão resolveu investir em uma pequena frota de carros, com 5 carros iniciais, com a finalidade de alugar com preços acessíveis e boas condições. Com uma pesquisa feita, joão viu que o aluguel de carros é uma boa opção para quem quer ter seu carro e não tem a oportunidade de comprar o seu, independente dos motivos. 
+Com a empresa tão prematura no mercado, joão não quer dar um passo maior que a perna, então faz tudo com calma e aos poucos para não perder esse investimento. João precisa sempre estar em contato com o movimento da empresa, por isso joão busca uma forma de que todas as informações da empresa esteja organizadas e acessíveis.
+A solução pra João foi separa todos os setores da empresa:
+1- quem é a empresa e qual sua finalidade
+2- quem comanda
+3- o cliente que a empresa já tem
+4- os carros disponíveis no momento
+5-os carros alugados e pra quem
+6- uma taxa de seguro
+7- o pagamento do aluguel dos carros
+A ideia é deixar tudo isso em uma planilha de controle, pra quando joão precisar ter o acesso a tais informações.
