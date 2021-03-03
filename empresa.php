@@ -40,10 +40,16 @@ class Empresa {
     public function setFoco($f) {
         $this->foco== $f;
     }
+    
+    function tempo ()
+    {
+        return(2021-$this->ano);
+    }
+
     function resumir()
 	{
 		echo "<P>SOBRE A EMPRESA</P>";
-        echo "A empresa $this->nome (CNPJ:$this->cnpj), está no mercado desde $this->ano, tendo em vista o foco de $this->foco";
+        echo "A empresa $this->nome (CNPJ:$this->cnpj), está no mercado a um pouco mais de ". $this->tempo()." ano, tendo em vista o foco de $this->foco";
 	}
    
    

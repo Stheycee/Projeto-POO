@@ -48,11 +48,19 @@ class Cliente {
     public function setRenda($r) {
         $this->renda == $r;
     }
+
+    function desconto ()
+    {
+        if ($this->renda>= 1500) {
+            echo "<p>Como a renda é maior que 1500 damos o direito a uma manutenção gratis, data a combinar.</p>";
+        }
+    }
     
     function resumir()
 	{
 		
-        echo "$this->nome, com a idade de $this->idade anos e é portador do NÚmero de CPF: $this->cpf. Profissão:$this->profissão e Renda: $this->renda ";
+        echo "$this->nome, com a idade de $this->idade anos e é portador do Número de CPF: $this->cpf. Profissão:$this->profissão e Renda: $this->renda. ";
+        $this->desconto();
 	}
    
    

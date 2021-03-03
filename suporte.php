@@ -40,11 +40,21 @@ class Suporte {
     public function setModelo($m) {
         $this->modelo == $m;
     }
+
+    public function manutenção(){
+        if ($this->uso == "Sim" Or $this->uso == "SIM" Or $this->uso == "sim" Or $this->uso == "s" Or $this->uso == "S"){
+            $this->manutenção = $this->valor-200;
+            echo "<p>Pelo uso do suporte para a manutenção, o atual valor do suporte é de: $this->manutenção reais </p>";
+        }else{
+            echo "<p>Cliente sem uso do suporte</p>";
+        }
+    }
    
     function resumir()
 	{
 		
-        echo "O carro $this->modelo, tem suporte no valor de $this->valor. Com a $this->finalidade. Teve o uso deste suporte? $this->uso";
+        echo "O carro $this->modelo, tem suporte no valor de $this->valor reais, Com a $this->finalidade. Teve o uso deste suporte? $this->uso";
+        $this->manutenção();
 	}
    
    

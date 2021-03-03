@@ -55,11 +55,15 @@ class Alugados {
     function resumir()
 	{
 		
-        echo "<p>O Carro é do modelo $this->modelo,do ano $this->ano e o aluguel custa: $this->valor</p>";
-        echo "<p>O Carro está alugado ao cliente $this->cliente,o mesmo(a) alugou no dia $this->quando</p>";
+        echo "<p>O Carro é do modelo $this->modelo, do ano $this->ano e o aluguel custa: $this->valor</p>";
+        echo "<p>O Carro está alugado ao cliente: $this->cliente, alugando o carro há $this->quando meses</p>";
+        
 	}
    
-    
+    public function lucro()
+    {
+        return ($this->valor * $this->quando);
+    }
     
 }
 

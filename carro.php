@@ -38,9 +38,13 @@ class Carro {
 	{
 		
         echo "O Carro é do modelo $this->modelo,do ano $this->ano e o aluguel custa: $this->valor";
+        
 	}
    
-    
+    function idade ()
+    {
+        return(2021-$this->ano);
+    }
     
 }
 

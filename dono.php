@@ -4,12 +4,14 @@ class Dono {
     public $nome;
     public $cpf;
     public $idade;
+    public $telefone;
     
     
-    public function __construct($n,$c,$i) {
+    public function __construct($n,$c,$i,$telefone) {
         $this->nome = $n;
         $this->cpf = $c;
         $this->idade = $i;
+        $this->telefone =$telefone;
 
     }
 
@@ -32,11 +34,27 @@ class Dono {
     }
     public function setIdade($i) {
         $this->idade == $i;
+    
     }
+    public function getTelefone()
+
+	{
+		return $this->telefone;
+	}
+    public function setTelefone($telefone)
+	{
+		$this->telefone = $telefone;
+	}
+
+    function modificarNum($telefone)
+	{
+		$this->telefone = $telefone;
+	}
+
     function resumir()
 	{
 		
-        echo "O dono da empresa é $this->nome, com a idade de $this->idade anos e é portador do NÚmero de CPF: $this->cpf";
+        echo "O dono da empresa é $this->nome, com a idade de $this->idade anos e é portador do Número de CPF: $this->cpf e número de celular: $this->telefone ";
 	}
    
    
