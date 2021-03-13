@@ -1,4 +1,5 @@
 <?php 
+require_once 'menu.php';
 class Suporte {
     public $valor;
     public $finalidade;
@@ -61,6 +62,17 @@ class Suporte {
     
     
 }
+echo '<br />';
+echo '<br />';
+echo "<P>SUPORTE</P>";
+$a1 = new Suporte ("1000.00","Finalidade para o pagamento do seguro, conserto em geral que o carro precisar, o pagamento é feito quando o carro é alugado,quando usado é preciso completar o valor caso o cliente continue com a locação do veiculo","Não","Argo");
+$a1->resumir();
+echo '<hr />';
+$a2 = new Suporte ("1000.00","Finalidade para o pagamento do seguro, conserto em geral que o carro precisar, o pagamento é feito quando o carro é alugado,quando usado é preciso completar o valor caso o cliente continue com a locação do veiculo","Sim","Fiat Mobi");
+$a2->resumir();
+echo '<hr />';
+echo '<br />';
+echo '<br />';
 
 
 ?>

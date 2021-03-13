@@ -1,5 +1,7 @@
 <?php 
-class Pagamento {
+require_once 'interface.php';
+require_once 'menu.php';
+class Pagamento implements Pagar {
     public $valor;
     public $forma;
     public $vencimento;
@@ -48,7 +50,6 @@ class Pagamento {
     public function setData($d) {
         $this->Data == $d;
     }
-    
 
     function pagamento(){
         if ($this->vencimento<=$this->data){
@@ -61,7 +62,7 @@ class Pagamento {
 
     function resumir()
 	{
-        echo "O(a) cliente $this->cliente fez o pagamento no valor de $this->valor,com o vencimento de dia: $this->vencimento, optando em pagar por meio de $this->forma";
+        echo "O(a) cliente $this->cliente fez o pagamento no valor de $this->valor,com o vencimento de dia: $this->vencimento, Forma de pagamento: $this->forma";
         $this->pagamento();
         echo '<br />';
 	}
@@ -71,7 +72,15 @@ class Pagamento {
     
 }
 
-
+echo '<br />';
+echo '<br />';
+echo "<P>PAGAMENTOS</P>";
+echo "<P>obs.: o cliente que faz o pagamento antes da data de vencimento(sempre no dia 30 do mês) recebe um desconto de 20,00 reais no valor total.</P>";
+$a1 = new Pagamento ("400.00","Dinheiro","31/08/2020","Maria","30/08/2020");
+$a1->resumir();
+echo '<hr />';
+$a2 = new Pagamento ("350.00","Débito automatico","25/09/2020","Karina","30/09/2020");
+$a2->resumir();
 
 
 

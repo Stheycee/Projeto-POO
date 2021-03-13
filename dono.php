@@ -1,9 +1,8 @@
 
 <?php 
-class Dono {
-    public $nome;
-    public $cpf;
-    public $idade;
+require_once "classemae.php";
+require_once "menu.php";
+class Dono extends Dados{
     public $telefone;
     
     
@@ -15,27 +14,7 @@ class Dono {
 
     }
 
-    public function getNome() {
-        return $this->nome;
-    }
-    public function setNome($n) {
-        $this->nome == $n;
-    }
-
-    public function getCpf() {
-        return $this->cpf;
-    }
-    public function setCpf($c) {
-        $this->cpf == $c;
-    }
-
-    public function getIdade() {
-        return $this->idade;
-    }
-    public function setIdade($i) {
-        $this->idade == $i;
     
-    }
     public function getTelefone()
 
 	{
@@ -51,18 +30,18 @@ class Dono {
 		$this->telefone = $telefone;
 	}
 
-    function resumir()
-	{
-		
-        echo "O dono da empresa é $this->nome, com a idade de $this->idade anos e é portador do Número de CPF: $this->cpf e número de celular: $this->telefone ";
-	}
+    
    
    
     
     
 }
 
-
+echo '<br />';
+echo '<br />';
+$p1 = new Dono ("João","111.111.111-11","28","98888-8888");
+$p1->resumir();
+echo '<hr />';
 
 
 

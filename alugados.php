@@ -1,47 +1,43 @@
 <?php 
+
 class Alugados {
-    public $modelo;
-    public $ano;
-    public $valor;
     public $cliente;
     public $quando;
+    public $dados;
+    public $valor;
+
 
     
     
-    public function __construct($m,$a,$v,$c,$q) {
-        $this->modelo = $m;
-        $this->ano = $a;
-        $this->valor = $v;
+    public function __construct($c,$q,$v) {
+        
         $this->cliente = $c;
         $this->quando = $q;
+        $this->valor = $v;
+        
 
     }
 
-    public function getModelo() {
-        return $this->modelo;
+    public function getDados() {
+        return $this->dados;
     }
-    public function setModelo($m) {
-        $this->modelo == $m;
+    public function setDados($d) {
+        $this->dados == $d;
     }
 
-    public function getAno() {
-        return $this->ano;
+    public function getValor() {
+        return $this->valor;
     }
-    public function setAno($a) {
-        $this->ano == $a;
+    public function setValor($v) {
+        $this->valor == $v;
     }
+
 
     public function getCliente() {
         return $this->cliente;
     }
     public function setCliente($c) {
         $this->cliente == $c;
-    }
-    public function getValor() {
-        return $this->valor;
-    }
-    public function setValor($v) {
-        $this->Valor == $v;
     }
     public function getQuando() {
         return $this->quando;
@@ -55,8 +51,8 @@ class Alugados {
     function resumir()
 	{
 		
-        echo "<p>O Carro é do modelo $this->modelo, do ano $this->ano e o aluguel custa: $this->valor</p>";
         echo "<p>O Carro está alugado ao cliente: $this->cliente, alugando o carro há $this->quando meses</p>";
+        
         
 	}
    
@@ -67,6 +63,21 @@ class Alugados {
     
 }
 
+
+echo "<P>CARROS ALUGADOS</P>";
+$a1 = new Alugados ("Maria","10","300.00");
+$a1->setDados($c1->Resumircarro());
+$a1->resumir();
+echo "Lucro bruto: " . $a1->lucro();
+echo '<hr />';
+
+$a2 = new Alugados ("Karina","8","350.00");
+$a2->setDados($c2->Resumircarro());
+$a2->resumir();
+echo "Lucro bruto: " . $a2->lucro();
+echo '<hr />';
+echo '<br />';
+echo '<br />';
 
 
 

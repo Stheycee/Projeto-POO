@@ -1,8 +1,8 @@
 <?php 
-class Cliente {
-    public $nome;
-    public $cpf;
-    public $idade;
+require_once "classemae.php";
+require_once "menu.php";
+class Cliente extends Dados
+{
     public $profissão;
     public $renda;
     
@@ -16,31 +16,12 @@ class Cliente {
 
     }
 
-    public function getNome() {
-        return $this->nome;
-    }
-    public function setNome($n) {
-        $this->nome == $n;
-    }
-
-    public function getCpf() {
-        return $this->cpf;
-    }
-    public function setCpf($c) {
-        $this->cpf == $c;
-    }
 
     public function getProfissão() {
         return $this->profissão;
     }
     public function setProfissão($p) {
         $this->profissão == $p;
-    }
-    public function getIdade() {
-        return $this->idade;
-    }
-    public function setIdade($i) {
-        $this->idade == $i;
     }
     public function getRenda() {
         return $this->renda;
@@ -68,8 +49,17 @@ class Cliente {
     
 }
 
-
-
+echo '<br />';
+echo '<br />';
+echo "<P>CLIENTES</P>";
+$p1 = new Cliente ("Maria","111.111.111-11","28","Enfermeira","2.500,00");
+$p1->resumir();
+echo '<hr />';
+$p2 = new Cliente ("Karina","222.222.222-22","40","Cozinheira","4.000,00");
+$p2->resumir();
+echo '<hr />';
+echo '<br />';
+echo '<br />';
 
 
 
