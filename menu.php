@@ -21,6 +21,10 @@
       <a href="#" class="brand-logo">
       <img src="dick.gif" width="150" height="50" class="d-inline-block align-top" alt="">
         DICK VIGARISTA</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a class="nav-link active" aria-current="page" href="logoff.php">Sair</a></li>
+        
+      </ul>
       
     </div>
   </nav>

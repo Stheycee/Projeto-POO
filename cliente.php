@@ -1,5 +1,5 @@
 <?php 
-require_once "classemae.php";
+require_once "dados.php";
 require_once "menu.php";
 class Cliente extends Dados
 {
@@ -49,18 +49,48 @@ class Cliente extends Dados
     
 }
 
-echo '<br />';
-echo '<br />';
-echo "<P>CLIENTES</P>";
-$p1 = new Cliente ("Maria","111.111.111-11","28","Enfermeira","2.500,00");
-$p1->resumir();
-echo '<hr />';
-$p2 = new Cliente ("Karina","222.222.222-22","40","Cozinheira","4.000,00");
-$p2->resumir();
-echo '<hr />';
-echo '<br />';
-echo '<br />';
 
 
 
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+<div class="container">
+        <div class="row">
+    
+          <div class="card-login">
+            <div class="card">
+              <div class="card-header cyan">
+                Clientes
+              </div>
+              <div class="card-body">
+              <?php
+              
+
+              $p1 = new Cliente ("Karina","111.111.111-11","28","Enfermeira","2.500,00");
+              $p1->resumir();
+              echo '<hr />';
+              $p2 = new Cliente ("Maria","222.222.222-22","40","Cozinheira","4.000,00");
+              $p2->resumir();
+              echo '<hr />';
+              echo '<br />';
+              echo '<br />';
+
+              ?>
+
+                 <a type="button" class="btn btn-primary" href="home.php">Voltar</a>
+
+              
+    
+
+              </div>
+            </div>
+          </div>
+        </div>
+    
+</body>
+</html>

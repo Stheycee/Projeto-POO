@@ -1,7 +1,6 @@
 <?php
-require_once "classeabstrata.php";
+require_once "abstrata.php";
 require_once "menu.php";
-
 
 class Empresa extends Abstrata
 {
@@ -57,16 +56,39 @@ class Empresa extends Abstrata
    
 }
 
-
-echo '<br />';
-echo '<br />';
-
-        $e1 = new empresa ("Dick Vigarista","000000-00","2020","atender a todos que querem dar o primeiro passo para ter seu carro. Carros com qualidade e segurança, damos todos os suportes necessários para a contratação.");
-        $e1->resumir();
-        echo '<hr />';
-
-
-
-
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
+</head>
+<body>
+<div class="container">
+        <div class="row">
+    
+          <div class="card-login">
+            <div class="card">
+              <div class="card-header cyan">
+                Empresa
+              </div>
+              <div class="card-body">
+              <?php
+              
+                      $e1 = new empresa ("Dick Vigarista","000000-00","2020","atender a todos que querem dar o primeiro passo para ter seu carro. Carros com qualidade e segurança, damos todos os suportes necessários para a contratação.");
+                      $e1->resumir();
+                      echo '<hr />';
+
+              ?>
+
+                 <a type="button" class="btn btn-primary" href="home.php">Voltar</a>
+
+              
+    
+
+              </div>
+            </div>
+          </div>
+        </div>
+    
+</body>
+</html>

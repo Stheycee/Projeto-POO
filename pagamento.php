@@ -1,5 +1,5 @@
 <?php 
-require_once 'interface.php';
+require_once 'pagar.php';
 require_once 'menu.php';
 class Pagamento implements Pagar {
     public $valor;
@@ -72,17 +72,49 @@ class Pagamento implements Pagar {
     
 }
 
-echo '<br />';
-echo '<br />';
-echo "<P>PAGAMENTOS</P>";
-echo "<P>obs.: o cliente que faz o pagamento antes da data de vencimento(sempre no dia 30 do mês) recebe um desconto de 20,00 reais no valor total.</P>";
-$a1 = new Pagamento ("400.00","Dinheiro","31/08/2020","Maria","30/08/2020");
-$a1->resumir();
-echo '<hr />';
-$a2 = new Pagamento ("350.00","Débito automatico","25/09/2020","Karina","30/09/2020");
-$a2->resumir();
 
 
 
 
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+<div class="container">
+        <div class="row">
+    
+          <div class="card-login">
+            <div class="card">
+              <div class="card-header cyan">
+                Pagamento
+              </div>
+              <div class="card-body">
+              <?php
+              
+
+              echo "<P>obs.: o cliente que faz o pagamento antes da data de vencimento(sempre no dia 30 do mês) recebe um desconto de 20,00 reais no valor total.</P>";
+              $a1 = new Pagamento ("400.00","Dinheiro","31/08/2020","Maria","30/08/2020");
+              $a1->resumir();
+              echo '<hr />';
+              $a2 = new Pagamento ("350.00","Débito automatico","25/09/2020","Karina","30/09/2020");
+              $a2->resumir();
+
+              ?>
+
+                 <a type="button" class="btn btn-primary" href="home.php">Voltar</a>
+
+              
+    
+
+              </div>
+            </div>
+          </div>
+        </div>
+    
+</body>
+</html>
+
+
